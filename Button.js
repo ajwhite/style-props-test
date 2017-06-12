@@ -1,4 +1,5 @@
 import React from "react";
+import {Text} from 'react-native';
 import Button from "react-native-button";
 import glamorous from "glamorous-native";
 
@@ -18,7 +19,7 @@ const secondaryStyle = {
   borderWidth: 1
 };
 
-const StyledButton = glamorous(Button)(
+const StyledButton = glamorous(Button, {rootEl: Text})(
   baseStyle,
   props => (props.type === "primary" ? primaryStyle : secondaryStyle)
 );
